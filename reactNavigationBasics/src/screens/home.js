@@ -8,12 +8,17 @@ import {
 } from 'react-native';
 
 class Home extends Component{
+  handlePress=()=>{
+    // console.log(this.props.navigation);
+    this.props.navigation.navigate('Login');
+  }
   render(){
     return(
       <View style={styles.container}>
         <Text>Home</Text>
         <Button 
           title="Ir al Login"
+          onPress={this.handlePress}
         />
       </View>
     )
