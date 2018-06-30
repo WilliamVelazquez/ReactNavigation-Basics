@@ -9,8 +9,10 @@ import {
 
 class Login extends Component{
   handlePress=()=>{
+    console.log(this.props.navigation);
     this.props.navigation.navigate('About');
   }
+  //<Text>Login {this.props.navigation.state.params.nombre}</Text>
   render(){
     return(
       <View style={styles.container}>
