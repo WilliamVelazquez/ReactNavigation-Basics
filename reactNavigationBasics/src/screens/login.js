@@ -7,10 +7,18 @@ import {
   Button
 } from 'react-native';
 
+import {NavigationActions} from 'react-navigation';
+
 class Login extends Component{
   handlePress=()=>{
-    console.log(this.props.navigation);
-    this.props.navigation.navigate('About');
+    // console.log(this.props.navigation);
+    // this.props.navigation.navigate('About');
+    this.props.navigation.dispatch(
+      NavigationActions.navigate({
+        routeName: 'About'
+        // params / key / action
+      })
+    );
   }
   //<Text>Login {this.props.navigation.state.params.nombre}</Text>
   render(){
