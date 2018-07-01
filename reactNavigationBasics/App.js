@@ -45,7 +45,17 @@ const AppNavigator = createStackNavigator(
     initialRouteKey: 'login',
     initialRouteParams: {
       nombre: 'William Velázquez'
-    }
+    },
+    //headerMode: float screen none
+    //headerMode: 'screen',
+    // mode: modal card //en android siempre será modal
+    mode: 'card',
+    cardStyle: {
+      borderWidth: 2,
+      backgroundColor: 'red'
+    },
+    // headerTransitionPreset: 'fade-in-place' 'uikit'
+    headerTransitionPreset: 'uikit'
   }
 );
 
