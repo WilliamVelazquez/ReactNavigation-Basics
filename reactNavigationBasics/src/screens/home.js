@@ -7,10 +7,24 @@ import {
   Button
 } from 'react-native';
 
+import {StackActions} from 'react-navigation';
+
 class Home extends Component{
   handlePress=()=>{
     // console.log(this.props.navigation);
-    this.props.navigation.navigate('Login');
+    // this.props.navigation.navigate('Login');
+    this.props.navigation.dispatch(StackActions.push({
+      routeName: 'Login'
+    }));
+    // {
+    //   type: 'NAVIGATE',
+    //   payload: {
+    //     screen: 'Login',
+    //     params: {
+    //       name: 'William'
+    //     }
+    //   }
+    // });
   }
   render(){
     return(
