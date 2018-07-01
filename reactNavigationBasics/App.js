@@ -33,7 +33,7 @@ const AppNavigator = createStackNavigator(
     Login
   },
   {
-    initialRouteName: 'Login',
+    initialRouteName: 'Home',
     navigationOptions:{
       title: 'Un título genérico',
       headerTitleAllowFontScaling: true,
@@ -42,7 +42,7 @@ const AppNavigator = createStackNavigator(
       //headerBackImage: <Text>{`<=`}</Text>
       //header: <Text>Esto es un header</Text>
     },
-    initialRouteKey: 'login',
+    initialRouteKey: 'home',
     initialRouteParams: {
       nombre: 'William Velázquez'
     },
@@ -59,4 +59,19 @@ const AppNavigator = createStackNavigator(
   }
 );
 
-export default AppNavigator;
+const Main = createStackNavigator(
+  {
+    Main: {
+      screen: AppNavigator
+    },
+    Login: {
+      screen: Login
+    }
+  },
+  {
+    mode: 'modal',
+    headerMode: 'none'
+  }
+)
+
+export default Main;
