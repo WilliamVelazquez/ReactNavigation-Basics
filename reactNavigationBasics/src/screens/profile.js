@@ -11,6 +11,17 @@ class Profile extends Component{
   handlePress=()=>{
     this.props.navigation.navigate('Home');
   }
+  static navigationOptions = ({navigation}) => {
+    return {
+      title: `${navigation.getParam('name')} ${navigation.getParam('age', 23)}`
+    }
+  }
+  setParams = () => {
+    this.props.navigation.setParams({
+      name: 'Widyet',
+      age: 24
+    })
+  }
   render(){
     return(
       <View style={styles.container}>
@@ -18,6 +29,10 @@ class Profile extends Component{
         <Button 
           title="Ir al Home"
           onPress={this.handlePress}
+        />
+        <Button 
+          title="Cambiar Nombre"
+          onPress={this.setParams}
         />
       </View>
     )
