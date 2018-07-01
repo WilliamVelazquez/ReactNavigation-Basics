@@ -7,6 +7,8 @@ import {
   Button
 } from 'react-native';
 
+import Name from '../profile/components/name';
+
 class Profile extends Component{
   handlePress=()=>{
     this.props.navigation.navigate('Home');
@@ -34,6 +36,7 @@ class Profile extends Component{
           title="Cambiar Nombre"
           onPress={this.setParams}
         />
+        <Name />
       </View>
     )
   }
