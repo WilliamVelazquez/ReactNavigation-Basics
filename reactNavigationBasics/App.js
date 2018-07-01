@@ -35,7 +35,12 @@ const AppNavigator = createStackNavigator(
   {
     initialRouteName: 'Login',
     navigationOptions:{
-      title: 'Un título genérico'
+      title: 'Un título genérico',
+      headerTitleAllowFontScaling: true,
+      headerBackTitle: 'Atras',
+      gesturesEnabled: true,
+      //headerBackImage: <Text>{`<=`}</Text>
+      //header: <Text>Esto es un header</Text>
     },
     initialRouteKey: 'login',
     initialRouteParams: {
